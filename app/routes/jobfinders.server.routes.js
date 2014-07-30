@@ -1,9 +1,9 @@
 'use strict';
 
-	var users = require('../../app/controllers/users'),
-	    jobfinders = require('../../app/controllers/jobfinders');
+var users = require('../../app/controllers/users'),
+	jobfinders = require('../../app/controllers/jobfinders');
 
-	module.exports = function(app) {
+module.exports = function(app) {
 	// Jobfinders Routes
 		app.route('/jobfinders')
 			.get(jobfinders.list)
@@ -16,4 +16,4 @@
 
 		// Finish by binding the Jobfinder middleware
 		app.param('jobfinderId', jobfinders.jobfinderByID);
-	};
+};
