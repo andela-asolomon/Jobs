@@ -10,39 +10,35 @@ var mongoose = require('mongoose'),
  * Jobfinder Schema
  */
 var JobfinderSchema = new Schema({
-	job_title: {
+	created: {
+		type: Date,
+		default: Date.now
+	},
+	title: {
 		type: String,
 		default: '',
-		required: 'Please fill Jobfinder job_title',
+		required: 'Please fill Jobfinder job title',
 		trim: true
 	},
-	job_description: {
+	description: {
 		type: String,
 		default: '',
-		required: 'Please fill Jobfinder job description',
 		trim: true
 	},
-	company_name: {
+	company: {
 		type: String,
 		default: '',
-		required: 'Please fill Jobfinder company name',
 		trim: true
 	},
-	company_location: {
+	location: {
 		type: String,
 		default: '',
-		required: 'Please fill Jobfinder comopany loaction',
 		trim: true
 	},
 	industry: {
 		type: String,
 		default: '',
-		required: 'Please fill Jobfinder industry',
 		trim: true
-	},
-	created: {
-		type: Date,
-		default: Date.now
 	},
 	user: {
 		type: Schema.ObjectId,

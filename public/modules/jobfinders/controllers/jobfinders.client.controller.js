@@ -9,7 +9,11 @@ angular.module('jobfinders').controller('JobfindersController', ['$scope', '$sta
 		$scope.create = function() {
 			// Create new Jobfinder object
 			var jobfinder = new Jobfinders ({
-				name: this.name
+				title: this.title,
+				description: this.description,
+				company: this.company,
+				location: this.location,
+				industry: this.industry	
 			});
 
 			// Redirect after save
@@ -20,7 +24,11 @@ angular.module('jobfinders').controller('JobfindersController', ['$scope', '$sta
 			});
 
 			// Clear form fields
-			this.name = '';
+			this.title = '';
+			this.description = '';
+			this.company = '';
+			this.location = '';
+			this.industry = '';
 		};
 
 		// Remove existing Jobfinder

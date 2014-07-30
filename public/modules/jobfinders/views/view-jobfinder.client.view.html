@@ -1,6 +1,6 @@
 <section data-ng-controller="JobfindersController" data-ng-init="findOne()">
 	<div class="page-header">
-		<h1 data-ng-bind="jobfinder.name"></h1>
+		<h1 data-ng-bind="jobfinder.title"></h1>
 	</div>
 	<div class="pull-right" data-ng-show="authentication.user._id == jobfinder.user._id">
 		<a class="btn btn-primary" href="/#!/jobfinders/{{jobfinder._id}}/edit">
