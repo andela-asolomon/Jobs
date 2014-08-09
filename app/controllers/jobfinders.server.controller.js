@@ -37,7 +37,7 @@ var getErrorMessage = function(err) {
 exports.create = function(req, res) {
 	var jobfinder = new Jobfinder(req.body);
 	jobfinder.user = req.user;
-
+	
 	jobfinder.save(function(err) {
 		if (err) {
 			return res.send(400, {
@@ -59,7 +59,7 @@ exports.read = function(req, res) {
 /**
  * Update a Jobfinder
  */
-exports.update = function(req, res) {
+exports.update = function(req, res, next) {
 	var jobfinder = req.jobfinder ;
 
 	jobfinder = _.extend(jobfinder , req.body);
@@ -73,6 +73,8 @@ exports.update = function(req, res) {
 			res.jsonp(jobfinder);
 		}
 	});
+
+	next();
 };
 
 /**
@@ -109,7 +111,8 @@ exports.list = function(req, res) { Jobfinder.find().sort('-created').populate('
 /**
  * Jobfinder middleware
  */
-exports.jobfinderByID = function(req, res, next, id) { Jobfinder.findById(id).populate('user', 'displayName').exec(function(err, jobfinder) {
+exports.jobfinderByID = function(req, res, next, id) { 
+	Jobfinder.findById(id).populate('user', 'displayName').exec(function(err, jobfinder) {
 		if (err) return next(err);
 		if (! jobfinder) return next(new Error('Failed to load Jobfinder ' + id));
 		req.jobfinder = jobfinder ;

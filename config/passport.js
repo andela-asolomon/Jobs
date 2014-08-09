@@ -2,6 +2,8 @@
 
 var passport = require('passport'),
 	User = require('mongoose').model('User'),
+	Employer = require('mongoose').model('Employer'),
+	Jobsearcher = require('mongoose').model('Jobsearcher'),
 	path = require('path'),
 	config = require('./config');
 
@@ -13,7 +15,7 @@ module.exports = function() {
 
 	// Deserialize sessions
 	passport.deserializeUser(function(id, done) {
-		User.findOne({
+		Employer.findOne({
 			_id: id
 		}, '-salt -password', function(err, user) {
 			done(err, user);

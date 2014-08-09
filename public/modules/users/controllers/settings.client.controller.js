@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('users').controller('SettingsController', ['$scope', '$http', '$location', 'Users', 'Authentication',
-	function($scope, $http, $location, Users, Authentication) {
+angular.module('users').controller('SettingsController', ['$scope', '$rootScope', '$http', '$location', 'Users', 'Authentication', '$stateParams',
+	function($scope, $rootScope, $http, $location, Users, Authentication, $stateParams) {
 		$scope.user = Authentication.user;
 
 		// If user is not signed in then redirect back home
@@ -62,6 +62,33 @@ angular.module('users').controller('SettingsController', ['$scope', '$http', '$l
 			}).error(function(response) {
 				$scope.error = response.message;
 			});
+		};
+
+		$scope.getJobId = function() {
+			$scope.job = $rootScope.jobfinder;
+			// console.log($scope.job);
+		};
+
+		$scope.apply = function() {
+			console.log('Half of a yellow sun');
+			$scope.success = $scope.error = null;
+			$scope.jobApp = $scope.job;
+		
+			var user = new Users($scope.user);
+			console.log($scope.user);
+			$scope.user.empId = $scope.jobApp.user._id;
+
+			$http.post('/users/applyJob', $scope.user).success(function(response){
+				$scope.success = true;
+			});
+
+			// user.$save(function(response) {
+			// 	console.log('Checking for application');
+			// 	$scope.success = true;
+			// 	Authentication.user = response;
+			// }, function(response) {
+			// 	$scope.error = response.data.message;
+			// });
 		};
 	}
 ]);

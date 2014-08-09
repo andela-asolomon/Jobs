@@ -7,6 +7,5 @@ angular.module('jobfinders').run(['Menus',
 		Menus.addMenuItem('topbar', 'Jobfinders', 'jobfinders', 'dropdown', '/jobfinders(/create)?');
 		Menus.addSubMenuItem('topbar', 'jobfinders', 'List Jobfinders', 'jobfinders');
 		Menus.addSubMenuItem('topbar', 'jobfinders', 'New Jobfinder', 'jobfinders/create');
-		// Menus.addSubMenuItem('topbar', 'jobfinders', 'Show Jobs', 'jobfinders');
 	}
 ]);

@@ -20,6 +20,11 @@ angular.module('jobfinders').config(['$stateProvider',
 		state('editJobfinder', {
 			url: '/jobfinders/:jobfinderId/edit',
 			templateUrl: 'modules/jobfinders/views/edit-jobfinder.client.view.html'
+		}).
+		state('applyJobfinder', {
+			url: '/jobfinders/:jobfinderId/apply',
+			templateUrl: 'modules/jobfinders/views/apply-jobfinder.client.view.html'
 		});
+
 	}
 ]);

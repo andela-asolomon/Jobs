@@ -6,6 +6,8 @@
 var mongoose = require('mongoose'),
 	passport = require('passport'),
 	User = mongoose.model('User'),
+	Employer = mongoose.model('Employer'),
+	Jobsearcher = mongoose.model('Jobsearcher'),
 	_ = require('lodash');
 
 /**
@@ -40,7 +42,16 @@ exports.signup = function(req, res) {
 	delete req.body.roles;
 
 	// Init Variables
-	var user = new User(req.body);
+	var type = req.body.type;
+	// console.log(type);
+	// var len = -size.(req.body);
+	var user;
+	if(type === 'employer'){
+		user = new Employer(req.body);
+	}
+	else {
+		user = new Jobsearcher(req.body);
+	}
 	var message = null;
 
 	// Add missing user fields
@@ -72,12 +83,14 @@ exports.signup = function(req, res) {
 /**
  * Signin after passport authentication
  */
-exports.signin = function(req, res, next) {
+
+var passportAuth = function(foundUser, req, res, next){
 	passport.authenticate('local', function(err, user, info) {
+		user = foundUser;
 		if (err || !user) {
 			res.send(400, info);
 		} else {
-			// Remove sensitive data before login
+			
 			user.password = undefined;
 			user.salt = undefined;
 
@@ -87,9 +100,27 @@ exports.signin = function(req, res, next) {
 				} else {
 					res.jsonp(user);
 				}
-			});
+		 	});
 		}
 	})(req, res, next);
+
+};
+
+var jobSearcherSignin = function(req, res, next){
+	Jobsearcher.findOne({'username': req.body.username}).exec(function(err, user){
+		passportAuth(user, req, res, next);
+	});
+};
+
+exports.signin = function(req, res, next) {
+	Employer.findOne({'username': req.body.username}).exec(function(err, user){
+		if(!user){
+			jobSearcherSignin(req, res, next);
+		}
+		else {
+			passportAuth(user, req, res, next);
+		}
+	});
 };
 
 /**
@@ -129,6 +160,29 @@ exports.update = function(req, res) {
 			message: 'User is not signed in'
 		});
 	}
+};
+
+exports.apply = function(req, res) {
+	console.log('Finding by Id Init');
+	console.log(req.body.empId);
+	var type = req.body._type;
+	
+	Employer.findById(req.body.empId).exec(function(err, user) {
+		console.log('User: ' + user);
+		if (type === 'Jobsearcher') user.jobApplication.push(req.body);
+
+			user.save(function(err) {
+			if (err) {
+				return res.send(400, {
+					message: getErrorMessage(err)
+				});
+			} else {
+				res.jsonp(user);
+			}
+		});
+
+			console.log(user);
+	});
 };
 
 /**
@@ -239,6 +293,7 @@ exports.userByID = function(req, res, next, id) {
  * Require login routing middleware
  */
 exports.requiresLogin = function(req, res, next) {
+	console.log('Checking starts');
 	if (!req.isAuthenticated()) {
 		return res.send(401, {
 			message: 'User is not logged in'
