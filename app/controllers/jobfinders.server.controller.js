@@ -56,13 +56,11 @@ exports.read = function(req, res) {
 	res.jsonp(req.jobfinder);
 };
 
-/**
- * Update a Jobfinder
- */
-exports.update = function(req, res, next) {
-	var jobfinder = req.jobfinder ;
 
-	jobfinder = _.extend(jobfinder , req.body);
+exports.update = function(req, res) {
+	var jobfinder = req.jobfinder;
+
+	jobfinder = _.extend(jobfinder, req.body);
 
 	jobfinder.save(function(err) {
 		if (err) {
@@ -73,8 +71,6 @@ exports.update = function(req, res, next) {
 			res.jsonp(jobfinder);
 		}
 	});
-
-	next();
 };
 
 /**

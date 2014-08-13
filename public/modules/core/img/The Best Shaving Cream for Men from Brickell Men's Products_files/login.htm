@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!-- saved from url=(0141)https://brickell-mens-products.myshopify.com/admin/bar/login?u=http%3A%2F%2Fbrickellmensproducts.com%2Fpages%2Fthe-best-shaving-cream-for-men -->
+<html style="background: transparent;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style type="text/css">
+      * { margin:0; padding:0;}
+      html { font-size:62.5%; -webkit-touch-callout:none; background:#191919; }
+      body { line-height:18px; font-size:13px; color:#444; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; }
+      img { border:0;}
+      a { text-decoration:none; color:#3084ca; }
+      a:hover { color:#3a9ef0; text-decoration:underline; }
+      .wrapper { max-width:1620px; margin:0 auto; position:relative; }
+      #storefront-bar { background:#191919; }
+      .logo { display:block; float:left; height:40px; line-height:40px; font-weight:400; padding:0 10px; color:#eee; font-size:12px; }
+      .logo:hover { background-color:#222; color:#fff; text-decoration:none; }
+      .logo { padding:0; width:178px; background:url("/images/admin2/logo-live.png") no-repeat 10px -4px; overflow:hidden; text-indent:-9999px; }
+      .logo:hover { background-position:10px -52px; }
+
+      .view-your-store { display:block; float:left; margin-left:18px; height:40px; line-height:40px; color:#808080; font-size:13px; padding:0 15px 0 0; }
+      .view-your-store:hover { color:#fff; text-decoration:none; background-color:#222; }
+      .view-your-store:hover .ico-16.ico-view-storefront { background-position:-16px -273px; }
+      .store-password { display:block; float:right; margin-right:50px; height:40px; line-height:40px; color:#808080; font-size:13px; }
+
+      .ico { display: inline-block; line-height: 0; vertical-align: top; text-indent:999em; white-space:nowrap; overflow:hidden; background:url("/images/admin2/ico-sprite-small.png"); }
+      .ico-16 { width: 16px; height: 16px; background-repeat: no-repeat; }
+      .ico-16.ico-view-storefront { background-position:0 -273px; }
+      .ico-view-storefront { margin:12px 14px; }
+
+      #admin-bar-actions { position:absolute; right:0; top:0; list-style:none; margin:0; padding:0;}
+
+      #close-admin-bar { cursor:pointer; background: url("/images/admin2/shopify2-admin-bar-toggle.png") no-repeat -40px -40px; height:40px; width:40px; margin-right:0px; display:block; text-indent:-99999px;}
+      #close-admin-bar:hover { background-position: -40px 0; }
+
+      #storefront-bar-minimized  { position:absolute; right:0; top:0;}
+      #storefront-bar-minimized span { cursor:pointer; background: url("/images/admin2/shopify2-admin-bar-toggle.png") no-repeat 0 -40px; height:40px; width:40px; margin-right:0px; display:block; text-indent:-99999px;}
+      #storefront-bar-minimized span:hover { background-position:0 0; }
+      .collapsed { display: none; }
+    </style>
+</head>
+<body style="background: transparent;">
+
+  <header id="storefront-bar" class="collapsed">
+  <div class="wrapper clearfix">
+    <h1><a href="https://brickell-mens-products.myshopify.com/admin" class="logo no-bar-redirect" target="_blank">Dashboard</a></h1>
+    <a href="https://brickell-mens-products.myshopify.com/admin" class="view-your-store no-bar-redirect" target="_blank"><i class="ico ico-16 ico-view-storefront"></i>View your admin</a>
+  </div>
+  <ul id="admin-bar-actions">
+  <li><a class="no-bar-redirect" href="https://brickell-mens-products.myshopify.com/admin/bar/login?u=http%3A%2F%2Fbrickellmensproducts.com%2Fpages%2Fthe-best-shaving-cream-for-men#" id="close-admin-bar">Hide this bar</a></li>
+</ul>   
+</header>
+<div id="storefront-bar-minimized">
+  <span id="show-admin-bar">show this bar</span>
+</div><!-- #storefront-bar-minimized -->
+
+
+  <script src="jquery.min(1).js"></script>
+
+  <script type="text/javascript">
+    function setCookie(c_name, value, exdays) {
+      var exdate=new Date();
+      exdate.setDate(exdate.getDate() + exdays);
+      var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString()+";path=/admin");
+      document.cookie=c_name + "=" + c_value;
+    }
+
+    jQuery(document).ready(function($){
+
+      cache = {};
+      cache.$storefrontBar = $('#storefront-bar');
+      cache.$storefrontBarMinimized = $('#storefront-bar-minimized');
+
+        $("html, body").css("background","transparent"); // cant have a transparent iframe on load
+
+        $('a:not(.no-bar-redirect)').click(function(event) {
+          event.preventDefault();
+          window.top.location = $(this).attr('href');
+          return false;
+        });
+
+      $("#show-admin-bar").click(function(elem){
+        $('#admin-bar').show();
+        cache.$storefrontBar.fadeIn("fast");
+        cache.$storefrontBarMinimized.fadeOut("fast");
+
+        window.setTimeout(function() { window.top.postMessage("1", "http://brickellmensproducts.com"); }, 0);
+        setCookie("_abv", "1", 730);
+
+        return false;
+      });
+
+      $("#close-admin-bar").click(function(elem){
+        cache.$storefrontBar.hide();
+        cache.$storefrontBarMinimized.fadeIn("fast");
+        $("html, body").css("background","transparent")
+
+        window.setTimeout(function() { window.top.postMessage("0", "http://brickellmensproducts.com"); }, 0);
+        setCookie("_abv", "0", 730);
+
+        return false;
+      });
+    });
+  </script>
+
+
+
+</body></html>

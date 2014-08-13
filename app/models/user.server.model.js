@@ -114,6 +114,11 @@ var jobApplicationSchema = new Schema({
 	  	trim: true,
 	  	default: ''
 	 },
+	 describe: {
+	  	type: String,
+	  	trim: true,
+	  	default: ''
+	 },
 	specialization : {
 	  	type: String,
 	  	trim: true,

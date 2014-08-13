@@ -1,9 +1,10 @@
 <section class="row" data-ng-controller="SettingsController" data-ng-init="getJobId()">
-	<div class="container">    
+	<div class="signup">
+		<div class="container">    
         <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
             <div class="panel panel-info" >
                     <div class="panel-heading">
-                        <div class="panel-title">Job Application</div>
+                        <div class="panel-title">Job Application | Confirm your Information</div>
                     </div>     
 
                     <div style="padding-top:30px" class="panel-body">
@@ -12,7 +13,7 @@
 								<strong data-ng-bind="error"></strong>
 						</div>
                             
-                        <form data-ng-submit="apply()" class="form-horizontal" role="form" autocomplete="off">
+                        <form data-ng-submit="apply()" class="form-horizontal" role="form" autocomplete="off" novalidate>
 
                             <div style="margin-bottom: 25px" class="input-group">
                             	<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
@@ -28,14 +29,20 @@
 							</div>
 							<div style="margin-bottom: 25px" class="input-group">
 								<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-								<input type="text" required id="phoneNumber" name="phoneNumber" class="form-control" data-ng-model="user.mobileNumber" placeholder="phoneNumber">
+								<input type="text" required id="phoneNumber" name="phoneNumber" class="form-control" data-ng-model="user.mobileNumber" placeholder="Mobile Number">
+							</div>
+							<div style="margin-bottom: 25px" class="input-group">
+								<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+								<input type="text" required id="phoneNumber" name="phoneNumber" class="form-control" data-ng-model="user.specialization" placeholder="Specialization">
 							</div>
 							<div style="margin-bottom: 25px" class="input-group">
 								<span class="input-group-addon"><i class="glyphicon glyphicon-info-sign"></i></span>
-								<input type="text" required id="address" name="address" class="form-control" data-ng-model="user.address" placeholder="address" cols="40" rows="10"></input>
+								<input type="text" required id="address" name="address" class="form-control" data-ng-model="user.address" placeholder="address"></input>
 							</div>
-							<input type="hidden" value="RootScope" data-ng-init="job.user._id">
-							{{job.user._id}}
+							<div style="margin-bottom: 25px" class="input-group">
+								<span class="input-group-addon"><i class="glyphicon glyphicon-info-sign"></i></span>
+								<textarea type="text" required id="address" name="address" class="form-control" data-ng-model="user.describe" placeholder="Describe your self in 200 words" cols="40" rows="10"></textarea>
+							</div>
 							<div style="margin-top: 25px" class="form-group">
 								<div class="col-sm-12 controls">
 									<button type="submit" class="btn btn-lg btn-success btn-block">Apply Now</button>
@@ -45,5 +52,6 @@
 					</div>  
         		</div>
         	</div> 
+	</div>
 	</div>
 </section>

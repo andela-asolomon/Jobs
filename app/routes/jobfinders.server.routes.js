@@ -14,10 +14,6 @@ module.exports = function(app) {
 			.put(users.requiresLogin, jobfinders.hasAuthorization, jobfinders.update)
 			.delete(users.requiresLogin, jobfinders.hasAuthorization, jobfinders.delete);
 
-		app.route('/jobfinders/:jobfinderId/apply')
-			.get(jobfinders.read)
-			.post(users.requiresLogin, jobfinders.hasAuthorization, jobfinders.update, users.apply);
-
 		// Finish by binding the Jobfinder middleware
 		app.param('jobfinderId', jobfinders.jobfinderByID);
 };

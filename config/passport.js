@@ -15,10 +15,16 @@ module.exports = function() {
 
 	// Deserialize sessions
 	passport.deserializeUser(function(id, done) {
-		Employer.findOne({
-			_id: id
-		}, '-salt -password', function(err, user) {
-			done(err, user);
+		Employer.findOne({_id: id }, '-salt -password', function(err, user) {
+			if(err) done(err);
+				if (user) {
+					done(null, user);
+				} else {
+					Jobsearcher.findOne({_id: id}, '-salt -password', function(err, user) {
+						if (err) done(err);
+						done(null, user);
+					});
+				}
 		});
 	});
 

@@ -1,0 +1,498 @@
+@font-face {
+  font-family: 'ClarendonBT-Roman';
+  src: url('//cdn.shopify.com/s/files/1/0513/2409/t/8/assets/clarendon.eot?14329'); /* IE9 Compat Modes */
+  src: url('//cdn.shopify.com/s/files/1/0513/2409/t/8/assets/clarendon.eot?14329#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('//cdn.shopify.com/s/files/1/0513/2409/t/8/assets/clarendon.woff?14329') format('woff'), /* Modern Browsers */
+    url('//cdn.shopify.com/s/files/1/0513/2409/t/8/assets/clarendon.ttf?14329')  format('truetype'), /* Safari, Android, iOS */
+    url('//cdn.shopify.com/s/files/1/0513/2409/t/8/assets/clarendon.svg?14329#wf') format('svg');
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'ClarendonBT-Roman';
+    src: url('//cdn.shopify.com/s/files/1/0513/2409/t/8/assets/clarendon.eot?14329'); /* IE9 Compat Modes */
+    src: url('//cdn.shopify.com/s/files/1/0513/2409/t/8/assets/clarendon.eot?14329#iefix') format('embedded-opentype'), /* IE6-IE8 */
+      url('//cdn.shopify.com/s/files/1/0513/2409/t/8/assets/clarendon.woff?14329') format('woff'), /* Modern Browsers */
+      url('//cdn.shopify.com/s/files/1/0513/2409/t/8/assets/clarendon.ttf?14329')  format('truetype'), /* Safari, Android, iOS */
+      url('//cdn.shopify.com/s/files/1/0513/2409/t/8/assets/clarendon.svg?14329#wf') format('svg');
+  }
+}
+
+.clarendon { 
+  font-family: ClarendonBT-Roman; 
+}
+
+
+@font-face {
+  font-family: 'ClarendonBT-Light';
+  src: url('//cdn.shopify.com/s/files/1/0513/2409/t/8/assets/clarendon-light.eot?14329'); /* IE9 Compat Modes */
+  src: url('//cdn.shopify.com/s/files/1/0513/2409/t/8/assets/clarendon-light.eot?14329#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('//cdn.shopify.com/s/files/1/0513/2409/t/8/assets/clarendon-light.woff?14329') format('woff'), /* Modern Browsers */
+    url('//cdn.shopify.com/s/files/1/0513/2409/t/8/assets/clarendon-light.ttf?14329')  format('truetype'), /* Safari, Android, iOS */
+    url('//cdn.shopify.com/s/files/1/0513/2409/t/8/assets/clarendon-light.svg?14329#wf') format('svg');
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'ClarendonBT-Light';
+    src: url('//cdn.shopify.com/s/files/1/0513/2409/t/8/assets/clarendon-light.eot?14329'); /* IE9 Compat Modes */
+    src: url('//cdn.shopify.com/s/files/1/0513/2409/t/8/assets/clarendon-light.eot?14329#iefix') format('embedded-opentype'), /* IE6-IE8 */
+      url('//cdn.shopify.com/s/files/1/0513/2409/t/8/assets/clarendon-light.woff?14329') format('woff'), /* Modern Browsers */
+      url('//cdn.shopify.com/s/files/1/0513/2409/t/8/assets/clarendon-light.ttf?14329')  format('truetype'), /* Safari, Android, iOS */
+      url('//cdn.shopify.com/s/files/1/0513/2409/t/8/assets/clarendon-light.svg?14329#wf') format('svg');
+  }
+}
+
+.clarendon-light { 
+  font-family: ClarendonBT-Light; 
+}
+
+
+.description .tabs {
+	border-bottom: 1px solid #2d2c2a;
+	display: table;
+	margin: 10px 0 20px;
+}
+
+  .description .tabs li {
+      float: left;
+      margin-bottom: -1px;
+      position: relative;
+      display: block;
+  }
+  
+  .description .tabs li a {
+      line-height: 1.42857143;
+      border: 1px solid transparent;
+      border-radius: 4px 4px 0 0;
+      position: relative;
+      display: block;
+      padding: 10px 13px;
+      margin: 0;
+      font-size: 14px;
+      color: #189acb;
+  }
+  
+  .description .tabs li a.active, 
+  .description .tabs li a.active:hover, 
+  .description .tabs li a.active:focus {
+      color: #fff;
+  
+      border-bottom-color: transparent;
+      cursor: default;
+  }
+  .description .tab-area {
+      margin-bottom: 40px;
+  }
+
+.slideshow-wrapper {
+  background-color: #0d0d0c;
+  border-bottom: 1px solid #232321;
+  margin-bottom: 50px;
+}
+  
+  .slideshow-wrapper .wrapper {
+    padding-bottom: 0;
+  }
+  
+  .slideshow-wrapper .flexslider,
+  .slideshow-wrapper .wrapper .row {
+    margin-bottom: 0;
+  }
+
+#header {
+  margin-bottom: 0;
+}
+
+.header-wrapper {
+  border-bottom: 1px solid #232321;
+  background: url('//cdn.shopify.com/s/files/1/0513/2409/t/8/assets/header_bg.jpg?14329') center top no-repeat #111111;
+}
+
+.header-wrapper .wrapper {
+  padding-bottom: 0;
+}
+
+.intro-wrapper {
+  padding-top: 30px;
+  background: #201f1e;
+}
+
+  .intro-wrapper .wrapper > .row {
+    margin-bottom: 0;
+  }
+  
+  .intro-wrapper div.products {
+    background: #201f1e;
+  }
+
+#content {
+  padding-top: 0px;
+}
+  
+  .content-wrapper #content {
+    padding-top: 30px;
+  }
+
+
+.promo-images,
+.promo-images img {
+  transition: all 0.3s ease;
+}
+
+.promo-images:hover img {
+  -moz-box-shadow: 0px 0px 1px 1px #666666;
+  -webkit-box-shadow: 0px 0px 1px 1px #666666;
+  box-shadow: 0px 0px 1px 1px #666666;
+}
+
+
+#nav{
+  border-bottom: none !important;
+}
+
+.toolbar-wrapper {
+  border-bottom: 1px solid #232321;
+}
+
+
+
+/*************
+ * Highlight product styles
+ */
+
+.highlight {
+  position: absolute;
+  left: 0;
+  z-index: -1;
+}
+
+
+.product:hover img {
+  opacity: 1 !important;
+  filter: alpha(opacity=100);
+}
+
+
+/*************
+ * Slider styles
+ */
+
+.flexslider-text-container {
+}
+
+
+.flexslider .slider-img-mobile {
+  display: none;
+}
+
+.flexslider-text {
+  height: 100%;
+  width: 450px;
+  position: absolute;
+  left: 70px;
+  overflow: hidden;
+  z-index: 3;
+  background: url('//cdn.shopify.com/s/files/1/0513/2409/t/8/assets/slider_home_bg.png?14329') top left #0d0d0c;
+  padding: 0px 10px 0px 10px;
+}
+
+  .flexslider-text hr {
+    border: 0;
+    border-bottom: 1px solid #20201f;
+    color: #20201F;
+    width: 456px;
+    position: absolute;
+    top: 88px;
+    left: 50%;
+    margin-left: -228px;
+    z-index: 2;
+  }
+
+.flexslider-text .text .subHead {
+  color: #777674;
+  background: #0d0d0c;
+  display: inline;
+  padding: 0 5px;
+  font-size: 28px;
+  margin: 0;
+  font-weight: normal;
+}
+
+.flexslider-text .text {
+  position: absolute;
+  top: 84px;
+  width: 430px;
+  z-index: 6;
+}
+
+.flexslider-text .text h2 {
+  font-size: 88px;
+  letter-spacing: -.03em;
+  margin: 0px 0px 40px 0px;
+  padding: 0px;
+  line-height: 80px;
+}
+
+.flexslider-text .text p {
+  font-size: 13px;
+  line-height: 21px;
+  padding: 0 20px 22px;
+  margin: 0 auto 14px;
+  border-bottom: 1px solid #20201f;
+  width: 406px;
+}
+
+.flexslider a {
+  font-size: 14px;
+  
+}
+
+li#slide-1 div.flexslider-text{
+  background: #000;}
+
+li#slide-1 .flexslider-text .text .subHead{
+  background: #000;}
+
+  /* Responsiveness */
+
+  @media only screen and (max-width: 1026px) and (min-width: 798px) {
+  	
+  	.flexslider-text {
+      width: 300px;
+    }
+  
+  	.flexslider-text .text {
+      top: 30px;
+  	  width: 300px;
+    }
+  
+  	.flexslider-text hr {
+      top: 35px;
+    }
+  
+    .flexslider-text .text .subHead {
+      font-size: 24px;
+    }
+  
+    .flexslider-text .text h2 {
+      font-size: 56px;
+      margin-bottom: 15px;
+      line-height: 55px;
+    }
+  
+    .flexslider-text .text p {
+      font-size: 11px;
+      line-height: 15px;
+      padding: 0 10px 9px;
+  	  width: 260px;
+    }
+  
+  }
+
+  @media only screen and (max-width: 797px) /*and (min-width: 510px)*/ {
+    .span12 {
+    	width: 570px;
+    }
+  
+  
+  	.flexslider-text {
+      width: 230px;
+    }
+  
+  	.flexslider-text .text {
+      top: 30px;
+  	  width: 230px;
+    }
+  
+  	.flexslider-text hr {
+      top: 35px;
+    }
+  
+    .flexslider-text .text .subHead {
+      font-size: 18px;
+    }
+  
+    .flexslider-text .text h2 {
+      font-size: 36px;
+      margin-bottom: 15px;
+      line-height: 35px;
+    }
+  
+    .flexslider-text .text p {
+      font-size: 11px;
+      line-height: 15px;
+      padding: 0 10px 9px;
+  	  width: 200px;
+      margin-bottom: 4px;
+    }
+  
+  	.flexslider .text a {
+    	font-size: 12px;
+    }
+  }
+
+@media only screen and (max-width: 629px) /*and (min-width: 510px)*/ {
+  .span12 {
+  	width: 450px;
+  }
+  
+  .flexslider-text .text {
+    top: 6px;
+    width: 230px;
+  }
+  
+  	.flexslider-text hr {
+      top: 12px;
+    }
+  
+    .flexslider-text .text h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      line-height: 28px;
+    }
+  
+  	.flexslider .text a {
+    	font-size: 10px;
+    }
+}
+
+
+@media only screen and (max-width: 509px) {
+  .span12 {
+  	width: 290px;
+  }
+  
+  .flexslider-text {
+    position: relative;
+    height: 160px;
+    left: 0;
+    padding: 0;
+    width: 290px;
+  }
+  
+  .flexslider-text .text {
+    top: 6px;
+    width: 290px;
+  }
+  
+  	.flexslider-text hr {
+      top: 12px;
+    }
+  
+    .flexslider-text .text h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      line-height: 28px;
+    }
+  
+  	.flexslider .text a {
+    	font-size: 10px;
+    }
+  
+    .flexslider-text .text p {
+  	  width: 270px;
+    }
+  
+  
+  .flexslider .slider-img {
+    display: none;
+  }
+  .flexslider .slider-img-mobile {
+    display: block;
+  }
+}
+
+
+
+/**
+ * About pages
+ */
+
+.page.page-fixed-bg #content {
+	background-attachment: fixed;
+}
+
+@media only screen and (max-width: 797px) and (min-width: 600px) {
+  .page #content .details {
+  	margin-left: 30px;
+  }
+}
+
+@media only screen and (max-width: 629px) and (min-width: 510px) {
+  div.our-company {
+  	padding: 25px;
+  } 
+  
+  .page #content .details {
+  	margin-left: 30px;
+  }
+}
+
+@media only screen and (max-width: 509px) {
+  h1 {
+    font-size: 65px;
+  } 
+  
+  .page #content .details {
+    margin-left: 10px;
+  }
+  
+  .header-sub {
+    width: 275px;
+  }
+  
+  div.our-company {
+    padding: 15px;
+    width: 250px;
+    margin-left: 15px;
+  }
+  
+  .span6 {
+  	width: 275px;
+  }
+}
+
+
+
+/**
+ * Fix homepage div in mobile
+ */
+
+@media only screen and (max-width: 509px) {
+  div.homepage-about-inner-bottom {
+    height: 380px;
+    background-size: 250px 380px;
+  }
+  
+  .ingredients-holder {
+    margin-left: 0;
+  }
+  
+  .ingredients-holder .span3 {
+    margin-left: 0;
+    width: 270px;
+  }
+  
+  div.your-feedback {
+    padding: 20px 0 0 20px;
+    width: 270px;
+  }
+}
+
+
+/**
+ * Extra nav links
+ */
+.extra-nav-links {
+  margin-left: 140px;
+}
+@media only screen and (max-width: 797px) {
+  .toolbar .extra-nav-links {
+  	display: none;
+  }
+}
+
+.page {
+  background-image: url('//cdn.shopify.com/s/files/1/0513/2409/t/8/assets/aboout_bg_diagonal_lines.png?14329');
+}

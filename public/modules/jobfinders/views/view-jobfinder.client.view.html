@@ -1,29 +1,55 @@
 <section data-ng-controller="JobfindersController" data-ng-init="findOne()">
-	<div class="page-header">
-		<h1 data-ng-bind="jobfinder.title"></h1>
-	</div>
-	<div class="pull-right">
-		<a class="btn btn-primary" href="/#!/jobfinders/{{jobfinder._id}}/edit" data-ng-if="authentication.user._id == jobfinder.user._id">
-			<i class="glyphicon glyphicon-edit"></i>
-		</a>
-		<a class="btn btn-primary" data-ng-click="remove();" data-ng-if="authentication.user._id == jobfinder.user._id">
-			<i class="glyphicon glyphicon-trash"></i>
-		</a>
-		<div data-ng-hide="authentication.user._type == 'Employer'">
-			<a href="/#!/applyJob" class="btn btn-success">
-				Apply for this job
-			</a>
+	<div class="container">
+		<div class="row text-center">
+            <div class="col-lg-12">
+                <h1 class="page-header">{{jobfinder.title}}</h1>
+            </div>
+        </div>
+
+		<div class="row">
+			<div class="col-lg-4">
+	            <div class="panel panel-info">
+	                <div class="panel-heading">
+	                    <i class="glyphicon glyphicon-asterisk"></i> Summary
+	                </div>
+				
+	                <div class="panel-body">
+						Company Name: {{jobfinder.user.displayName}} <br>
+						Location: {{jobfinder.location}} <br>
+						Industry: {{jobfinder.industry}} <br>
+						Type: {{jobfinder.company}}
+					</div>
+
+					<div class="panel-footer" data-ng-hide="authentication.user._type == 'Employer'">
+						<div data-ng-hide="authentication.user._type == 'Employer'">
+							<a href="/#!/applyJob" class="btn btn-success" class="pull-right">
+								Apply Now
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-8">
+				<div class="panel panel-info">
+					<div class="panel-heading">
+						<i class="glyphicon glyphicon-star"></i> Description
+
+						<div class="pull-right">
+	                    	<a href="/#!/jobfinders/{{jobfinder._id}}/edit" data-ng-if="authentication.user._id == jobfinder.user._id">
+								<i class="glyphicon glyphicon-edit"></i>
+							</a>
+							<a data-ng-click="remove();" data-ng-if="authentication.user._id == jobfinder.user._id">
+								<i class="glyphicon glyphicon-trash"></i>
+							</a>
+	                    </div>
+					</div>
+
+					<div class="panel-body">
+						{{jobfinder.description}}
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
-	<div>
-		{{jobfinder}}
-	</div>
-	<small>
-		<em class="text-muted">
-			Posted on
-			<span data-ng-bind="jobfinder.created | date:'mediumDate'"></span>
-			by
-			<span data-ng-bind="jobfinder.user.displayName"></span>
-		</em>
-	</small>
 </section>

@@ -163,12 +163,9 @@ exports.update = function(req, res) {
 };
 
 exports.apply = function(req, res) {
-	console.log('Finding by Id Init');
-	console.log(req.body.empId);
 	var type = req.body._type;
 	
 	Employer.findById(req.body.empId).exec(function(err, user) {
-		console.log('User: ' + user);
 		if (type === 'Jobsearcher') user.jobApplication.push(req.body);
 
 			user.save(function(err) {
@@ -180,8 +177,6 @@ exports.apply = function(req, res) {
 				res.jsonp(user);
 			}
 		});
-
-			console.log(user);
 	});
 };
 

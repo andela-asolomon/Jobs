@@ -25,6 +25,7 @@
     "font-awesome": "^4.1.0",
     "forever": "~0.11.0",
     "glob": "~3.2.9",
+    "google-fonts": "0.0.0",
     "grunt-cli": "~0.1.13",
     "helmet": "~0.2.1",
     "lodash": "~2.4.1",
