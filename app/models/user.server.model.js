@@ -112,20 +112,23 @@ var jobApplicationSchema = new Schema({
 	address: {
 	  	type: String,
 	  	trim: true,
-	  	default: ''
+	  	default: '',
+	  	required: 'You must input a valid address'
 	 },
 	 describe: {
 	  	type: String,
 	  	trim: true,
-	  	default: ''
+	  	default: '',
+	  	required: 'You must give a brief description of yourself'
 	 },
 	specialization : {
 	  	type: String,
 	  	trim: true,
-		default: ''
+		default: '',
+		required: 'specialization is compulsory'
 	  },
 	mobileNumber : {
-	  	type: Number,
+	  	type: String,
 	  	trim: true,
 		default: ''
 	  },
