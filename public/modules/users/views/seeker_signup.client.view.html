@@ -18,7 +18,7 @@
                             <div style="margin-bottom: 25px" class="input-group">
                             	<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
 								<input type="text" required id="firstName" name="firstName" class="form-control" data-ng-model="credentials.firstName" placeholder="First Name" ng-minlength=3 ng-maxlength=20 ng-class="{ 'has-error' : signup_form.firstName.$pristine && signup_form.firstName.$invalid }">
-						            <small class="alert alert-danger col-sm-12" ng-show="signup_form.firstName.$error.required">
+						            <!-- <small class="alert alert-danger col-sm-12" ng-show="signup_form.firstName.$error.required">
 						                Your First Name is required.
 						            </small>
 						            <small class="alert alert-danger col-sm-12" ng-show="signup_form.firstName.$error.minlength">
@@ -26,12 +26,12 @@
 						            </small>
 						            <small class="alert alert-danger col-sm-12" ng-show="signup_form.firstName.$error.maxlength">
 						                Your First Name cannot be longer than 20 characters
-						            </small>
+						            </small> -->
 							</div>
 							<div style="margin-bottom: 25px" class="input-group">
 								<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
 								<input type="text" id="lastName" name="lastName" class="form-control" data-ng-model="credentials.lastName" placeholder="Last Name" ng-minlength=3 ng-maxlength=20 required ng-class="{ 'has-error' : signup_form.lastName.$pristine && signup_form.lastName.$invalid }">
-						            <small class="alert alert-danger col-sm-12" ng-show="signup_form.lastName.$error.required">
+						            <!-- <small class="alert alert-danger col-sm-12" ng-show="signup_form.lastName.$error.required">
 						                Your Last Name is required.
 						            </small>
 						            <small class="alert alert-danger col-sm-12" ng-show="signup_form.lastName.$error.minlength">
@@ -39,12 +39,12 @@
 						            </small>
 						            <small class="alert alert-danger col-sm-12" ng-show="signup_form.lastName.$error.maxlength">
 						                Your Last Name cannot be longer than 20 characters
-						            </small>
+						            </small> -->
 							</div>
 							<div style="margin-bottom: 25px" class="input-group">
 								<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
 								<input type="email" id="email" name="email" class="form-control" data-ng-model="credentials.email" placeholder="Email Address" ng-minlength=3 ng-maxlength=20 required ng-class="{ 'has-error' : signup_form.email.$pristine && signup_form.email.$invalid }">
-						            <small class="alert alert-danger col-sm-12" ng-show="signup_form.email.$error.required">
+						            <!-- <small class="alert alert-danger col-sm-12" ng-show="signup_form.email.$error.required">
 						                Your Email is required.
 						            </small>
 						            <small class="alert alert-danger col-sm-12" ng-show="signup_form.email.$error.minlength">
@@ -52,12 +52,12 @@
 						            </small>
 						            <small class="alert alert-danger col-sm-12" ng-show="signup_form.email.$error.maxlength">
 						                Your Email cannot be longer than 20 characters
-						            </small>
+						            </small> -->
 							</div>
 							<div style="margin-bottom: 25px" class="input-group">
 								<span class="input-group-addon"><i class="fa fa-user"></i></span>
 								<input type="text" id="username" name="username" class="form-control" data-ng-model="credentials.username" placeholder="Username" ng-minlength=3 ng-maxlength=20 required ng-class="{ 'has-error' : signup_form.username.$pristine && signup_form.username.$invalid }">
-						            <small class="alert alert-danger col-sm-12" ng-show="signup_form.username.$error.required">
+						           <!--  <small class="alert alert-danger col-sm-12" ng-show="signup_form.username.$error.required">
 						                Your Username is required.
 						            </small>
 						            <small class="alert alert-danger col-sm-12" ng-show="signup_form.username.$error.minlength">
@@ -65,12 +65,12 @@
 						            </small>
 						            <small class="alert alert-danger col-sm-12" ng-show="signup_form.username.$error.maxlength">
 						                Your Username cannot be longer than 20 characters
-						            </small>
+						            </small> -->
 							</div>
 							<div style="margin-bottom: 25px" class="input-group">
 								<span class="input-group-addon"><i class="fa fa-lock"></i></span>
 								<input type="password" id="password" name="password" class="form-control" data-ng-model="credentials.password" placeholder="Password" ng-minlength=7 ng-maxlenth=20 required ng-class="{ 'has-error' : signup_form.password.$pristine && signup_form.password.$invalid }">
-						            <small class="alert alert-danger col-sm-12" ng-show="signup_form.password.$error.required">
+						            <!-- <small class="alert alert-danger col-sm-12" ng-show="signup_form.password.$error.required">
 						                Your Password is required.
 						            </small>
 						            <small class="alert alert-danger col-sm-12" ng-show="signup_form.password.$error.minlength">
@@ -78,12 +78,12 @@
 						            </small>
 						            <small class="alert alert-danger col-sm-12" ng-show="signup_form.password.$error.maxlength">
 						                Your Password cannot be longer than 20 characters
-						            </small>
+						            </small> -->
 							</div>
 							<div style="margin-bottom: 25px" class="input-group">
 								<span class="input-group-addon"><i class="glyphicon glyphicon-briefcase"></i></span>
 								<input type="specialization" id="specialization" name="specialization" class="form-control" data-ng-model="credentials.specialization" placeholder="Specialization" ng-minlength=3 ng-maxlength=20 required ng-class="{ 'has-error' : signup_form.specialization.$pristine && signup_form.specialization.$invalid }">
-						            <small class="alert alert-danger col-sm-12" ng-show="signup_form.specialization.$error.required">
+						            <!-- <small class="alert alert-danger col-sm-12" ng-show="signup_form.specialization.$error.required">
 						                Your Specialization is required.
 						            </small>
 						            <small class="alert alert-danger col-sm-12" ng-show="signup_form.specialization.$error.minlength">
@@ -91,12 +91,12 @@
 						            </small>
 						            <small class="alert alert-danger col-sm-12" ng-show="signup_form.specialization.$error.maxlength">
 						                Your Specialization cannot be longer than 20 characters
-						            </small>
+						            </small> -->
 							</div>
 							<div style="margin-bottom: 25px" class="input-group">
 								<span class="input-group-addon"><i class="fa fa-mobile-phone"></i></span>
 								<input type="Number" id="mobileNumber" name="mobileNumber" class="form-control" data-ng-model="credentials.mobileNumber" placeholder="Mobile Number" ng-minlength=10 ng-maxlength=20 required ng-class="{ 'has-error' : signup_form.mobileNumber.$pristine && signup_form.mobileNumber.$invalid }">
-						            <small class="alert alert-danger col-sm-12" ng-show="signup_form.mobileNumber.$error.required">
+						            <!-- <small class="alert alert-danger col-sm-12" ng-show="signup_form.mobileNumber.$error.required">
 						                Your Mobile Number is required e.g 08084867569
 						            </small>
 						            <small class="alert alert-danger col-sm-12" ng-show="signup_form.mobileNumber.$error.minlength">
@@ -104,7 +104,7 @@
 						            </small>
 						            <small class="alert alert-danger col-sm-12" ng-show="signup_form.mobileNumber.$error.maxlength">
 						                Your Mobile Number cannot be longer than 20 characters
-						            </small>
+						            </small> -->
 							</div>
 							<div style="margin-top: 25px" class="input-group">
 								<input type="hidden" data-ng-init="credentials.type = 'jobseeker'">
